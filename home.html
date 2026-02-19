@@ -106,6 +106,7 @@
                         <h2>Transfer Money</h2>
                     </div>
                     <div
+                        onclick="showOnly('coupon')"
                         class="btn flex-col btn-outline border-base-300 h-full py-[20px] rounded-[12px]"
                     >
                         <img src="assets/opt-4.png" alt="" />
@@ -319,7 +320,7 @@
                             <label
                                 class="text-neutral label text-[16px] font-medium"
                             >
-                                Amount
+                                Enter Your Pin
                             </label>
                             <input
                                 id="tr_pin"
@@ -339,9 +340,43 @@
                     </div>
                 </div>
             </section>
+
+            <section id="coupon" class="w-11/12 mx-auto hidden">
+                <h2
+                    class="font-semibold text-[18px] text-neutral opacity-90 mb-4"
+                >
+                    Get Bonus
+                </h2>
+                <div class="card bg-base-100 rounded-3xl">
+                    <div class="card-body space-y-2">
+                        <div class="form-control space-y-2">
+                            <label
+                                class="label text-neutral opacity-90 text-[16px]"
+                                >Enter Bonus Coupon</label
+                            >
+                            <input
+                                id="coupon_number"
+                                placeholder="Enter your coupon"
+                                maxlength="4"
+                                minlength="4"
+                                pattern="/d{4}"
+                                class="w-full input rounded-full text-[18px] px-5 py-4 bg-base-200 outline-0"
+                                type="text"
+                            />
+                        </div>
+                        <button
+                            id="coupon_btn"
+                            class="btn btn-primary py-[20px] rounded-full font-semibold text-[20px]"
+                        >
+                            Get Bonus
+                        </button>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <script src="machin.js"></script>
+        <script src="bonus.js"></script>
         <script src="tr_money.js"></script>
         <script src="addmoney.js"></script>
         <script src="cashout.js"></script>
