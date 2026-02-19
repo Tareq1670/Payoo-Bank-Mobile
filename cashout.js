@@ -8,8 +8,6 @@ document.getElementById("cash_login_btn").addEventListener("click", () => {
     const amount = Number(getValue("cash_out_amount").replace(/\s+/g, ""));
     const balance = Number(getTextContent("balance").replace(/\s+/g, ""));
 
-    console.log(amount);
-
     let mobileValid = getValidation(mobile,11);
     let pinValid = getValidation(pin,4);
     let amountValid = false;

@@ -99,6 +99,7 @@
                         <h2>Cash Out</h2>
                     </div>
                     <div
+                        onclick="showOnly('tr_section')"
                         class="btn flex-col btn-outline border-base-300 h-full py-[20px] rounded-[12px]"
                     >
                         <img src="assets/opt-3.png" alt="" />
@@ -269,19 +270,79 @@
                 </div>
             </section>
 
-            <section id="transition" class="w-11/12 mx-auto hidden" >
+            <section id="transition" class="w-11/12 mx-auto hidden">
                 <h2
                     class="font-semibold text-[18px] text-neutral opacity-90 mb-4"
                 >
                     Transactions
                 </h2>
-                <div id="transition_list" class="space-y-2">
+                <div id="transition_list" class="space-y-2"></div>
+            </section>
 
+            <section id="tr_section" class="w-11/12 mx-auto hidden">
+                <h2
+                    class="font-semibold text-[18px] text-neutral opacity-90 mb-4"
+                >
+                    Transfer Money
+                </h2>
+                <div class="card bg-base-100 rounded-3xl">
+                    <div class="card-body space-y-2">
+                        <div class="form-control space-y-2">
+                            <label
+                                class="text-neutral label text-[16px] font-medium"
+                            >
+                                User Account Number
+                            </label>
+                            <input
+                                id="acount_number"
+                                class="input w-full outline-0 bg-base-200 rounded-full px-5 py-4 text-[16px]"
+                                maxlength="11"
+                                minlength="11"
+                                placeholder="Enter 11 digit number"
+                                type="text"
+                            />
+                        </div>
+                        <div class="form-control space-y-2">
+                            <label
+                                class="text-neutral label text-[16px] font-medium"
+                            >
+                                Amount
+                            </label>
+                            <input
+                                id="tr_amount"
+                                class="input w-full outline-0 bg-base-200 rounded-full px-5 py-4 text-[16px]"
+                                placeholder="Enter Amount to transfer"
+                                type="text"
+                            />
+                        </div>
+                        <div class="form-control space-y-2">
+                            <label
+                                class="text-neutral label text-[16px] font-medium"
+                            >
+                                Amount
+                            </label>
+                            <input
+                                id="tr_pin"
+                                class="input w-full outline-0 bg-base-200 rounded-full px-5 py-4 text-[16px]"
+                                maxlength="4"
+                                minlength="4"
+                                placeholder="Enter 4 digit pin number"
+                                type="password"
+                            />
+                        </div>
+                        <button
+                            id="tr_btn"
+                            class="btn rounded-full btn-primary text-[20px] py-[20px] font-semibold"
+                        >
+                            Sent Money
+                        </button>
+                    </div>
                 </div>
             </section>
         </main>
 
         <script src="machin.js"></script>
+        <script src="tr_money.js"></script>
         <script src="addmoney.js"></script>
         <script src="cashout.js"></script>
     </body>
