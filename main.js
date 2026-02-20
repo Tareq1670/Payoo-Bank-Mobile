@@ -36,7 +36,6 @@ document.getElementById("login_btn").addEventListener("click", () => {
             window.location.assign('home.html')
         } else {
             window.alert("Your Mobile And Your Pin Dosen't Match");
-            mobileNumberInput.value = "";
             pinNumberInput.value = "";
             return
         }
