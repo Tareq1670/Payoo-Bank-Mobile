@@ -72,6 +72,7 @@ function showOnly(id){
     document.getElementById("transition").classList.add("hidden");
     document.getElementById("tr_section").classList.add("hidden");
     document.getElementById("coupon").classList.add("hidden");
+    document.getElementById("pay_bill").classList.add("hidden");
     
     document.getElementById(id).classList.remove("hidden")
 }
